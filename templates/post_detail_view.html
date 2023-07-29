@@ -2,9 +2,12 @@
 
 {% block content %}
 
-    <dive class="post-entry">
+    <div class="post-entry">
         <h2>{{ post.title }}</h2>
         <p>{{ post.body }}</p>
-    </dive>
+    </div>
+
+    <a href="{% url 'post_edit' post.pk %}">+ Edit blog post</a>
+    <a href="{% url 'post_delete' post.pk %}">+ Delete blog post</a>
 
 {% endblock content %}
